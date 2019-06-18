@@ -1,31 +1,22 @@
 import React from 'react';
 import { posts } from '../../shared/posts';
-import { PostList } from '../posts/PostList'
+import { PostItem } from './PostItem'
 
-class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
+export const HomePage = () => {
 
-        this.state = {
-            posts: posts
-        }
-    }
-
-    render() {
-        return (
-            <div className="posts-list">
-                <h1 className="posts-title">POSTS</h1>
-                <div className="whole-list">
-                    <PostList posts={posts} />
-                </div>
-
-
+    return (
+        <div className="posts-list">
+            <h1 className="posts-title">POSTS</h1>
+            <div className="whole-list">
+                {posts.map((post) => {
+                    return <PostItem post={post} />
+                })}
             </div>
-        )
-    }
+
+
+        </div>
+    )
 
 }
 
-export {
-    HomePage
-}
+

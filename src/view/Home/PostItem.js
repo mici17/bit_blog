@@ -1,18 +1,18 @@
 import React from 'react';
 
 
-const Post = (props) => {
+const PostItem = ({ post }) => {
     return (
         <secton className="one-post">
-            <title>{props.post.id}</title>
-            <h4 className="post-title">{props.post.title}</h4>
+            <title>{post.id}</title>
+            <h4 className="post-title">{post.title}</h4>
             <article className="post-content">
-                {props.post.body}
+                {post.body}
             </article>
         </secton>
     )
 }
 
 export {
-    Post
+    PostItem
 }

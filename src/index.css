@@ -104,3 +104,26 @@ color: #662e68;
   padding:  10px 20px;
   margin-bottom: 25px;
 }
+
+.authors-list {
+  width: 80%;
+  margin:auto;
+}
+.authors-title {
+  text-align: center;
+  font-size: 45px;
+  color: #322b5b;
+}
+.author-name{
+  margin: 0px;
+  color: #322b5b;
+}
+.one-author {
+  display: block;
+  background-color: #b0b8db;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+
+
+}
