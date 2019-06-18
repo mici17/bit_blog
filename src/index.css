@@ -157,6 +157,17 @@ color: #662e68;
   border-bottom: 1px solid #322b5b;
 }
 
+.back {
+  position: relative;
+}
+
+.back-all-authors {
+  position: absolute;
+  left:20px;
+  font-size: 22px;
+  color: #b0b8db;
+}
+
 .single-author-title {
   font-size: 45px;
   text-align: center;

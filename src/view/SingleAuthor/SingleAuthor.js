@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const author = {
     "id": 2,
@@ -27,7 +28,10 @@ const author = {
 const SingleAuthor = () => {
     return (
         <div className="single-author-container">
-            <h1 className="single-author-title">SINGLE AUTHOR</h1>
+            <div className="back">
+               <Link to="/authors"><h4 className="back-all-authors"> &#60;All authors</h4></Link>
+                <h1 className="single-author-title">SINGLE AUTHOR</h1>
+            </div>
             <section>
                 <div className="single-author-photo">
                     <img src="https://via.placeholder.com/300" alt="img"/>
