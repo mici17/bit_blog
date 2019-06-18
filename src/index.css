@@ -127,3 +127,23 @@ color: #662e68;
 
 
 }
+
+.single-post {
+  width: 70%;
+  margin: auto;
+}
+
+.single-post-title {
+  font-size: 45px;
+  text-align: center;
+  color: #322b5b;
+
+}
+
+.single-post-body {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #662e68;
+
+}
