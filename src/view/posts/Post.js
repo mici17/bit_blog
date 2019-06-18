@@ -3,10 +3,10 @@ import React from 'react';
 
 const Post = (props) => {
     return (
-        <secton>
+        <secton className="one-post">
             <title>{props.post.id}</title>
-            <h4>{props.post.title}</h4>
-            <article>
+            <h4 className="post-title">{props.post.title}</h4>
+            <article className="post-content">
                 {props.post.body}
             </article>
         </secton>

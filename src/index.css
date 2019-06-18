@@ -41,15 +41,15 @@ margin-left:10%;
 
 .nav-links{
   display: inline-block;
-
   text-decoration: none;
   color: #4e5572;
 
 }
 .authors {
-  border-left: solid 4px #4e5572;
-  border-right: solid 4px #4e5572;
-  padding:  0 15px;
+  border-left: solid 4px #662e68;
+  border-right: solid 4px #662e68;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 footer{
@@ -63,7 +63,7 @@ footer p{
 
 .posts-list {
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
 }
 .posts-title {
   text-align: center;
@@ -86,4 +86,21 @@ font-size: 45px;
 }
 .about-content article p{
 color: #662e68;
+}
+
+.one-post h4{
+margin-top: 0;
+font-size: 25px;
+color: #662e68;
+}
+.one-post article{
+  font-size: 18px;
+  color: #322b5b;
+}
+.one-post{
+  display: block;
+  background-color: #b0b8db;
+  border-radius: 10px;
+  padding:  10px 20px;
+  margin-bottom: 25px;
 }
