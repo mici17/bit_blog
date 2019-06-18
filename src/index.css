@@ -147,3 +147,81 @@ color: #662e68;
   color: #662e68;
 
 }
+
+.single-author-container {
+  width: 80%;
+  margin: auto;
+}
+
+.single-author-container section {
+  border-bottom: 1px solid #322b5b;
+}
+
+.single-author-title {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #322b5b;
+}
+
+.single-author-photo {
+  float: left;
+  margin-right: 100px;
+}
+
+.single-author-photo img {
+  width: 250px;
+}
+
+.single-author-name-info h1 {
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  color:#322b5b;
+}
+
+.single-author-name-info p {
+  font-size: 24px;
+  padding-bottom: 24px;
+  color: #662e68;
+}
+
+.single-author-adress {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adress h3 {
+  color: #322b5b;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.adress p {
+  font-size: 24px;
+  padding-bottom: 24px;
+  color: #662e68;
+}
+
+.frame {
+  margin: 70px;
+
+}
+
+.single-author-container .company {
+  border-bottom: none;
+}
+.company h1 {
+  color: #322b5b;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.company p {
+  font-size: 24px;
+  padding-bottom: 24px;
+  color: #662e68;
+}
+
+
+
