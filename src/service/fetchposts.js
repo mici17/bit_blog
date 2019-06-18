@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Post } from '../entities/Posts'
+import { Post } from '../entities/Post'
 
 const fetchPosts = () => {
     return axios.get('https://jsonplaceholder.typicode.com/posts')
