@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#root{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+header {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #b0b8db;
+  color: #4e5572;
+}
+header .logo{
+  padding-top: 5px;
+  font-size: 50px;
+}
+.links{
+  margin-right: 10%;
+}
+.links p{
+  padding: 15px;
+font-size: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.logo {
+margin-left:10%;
+
+}
+
+.nav-links{
+  display: inline-block;
+
+  text-decoration: none;
+  color: #4e5572;
+
+}
+.authors {
+  border-left: solid 4px #4e5572;
+  border-right: solid 4px #4e5572;
+  padding:  0 15px;
+}
+
+footer{
+  background-color: #b0b8db;
+  padding: 20px 0;
+  text-align: center;
+}
+footer p{
+  color: #4e5572;
+}
+
+.posts-list {
+  width: 80%;
+  margin: auto;
+}
+.posts-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
