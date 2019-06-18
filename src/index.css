@@ -69,3 +69,21 @@ footer p{
   text-align: center;
   margin-bottom: 40px;
 }
+
+.about-content{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-content article{
+  font-size: 18px;
+  text-align: center;
+}
+
+.about-content article h1{
+color: #322b5b;
+font-size: 45px;
+}
+.about-content article p{
+color: #662e68;
+}
