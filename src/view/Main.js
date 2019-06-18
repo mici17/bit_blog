@@ -12,7 +12,7 @@ const Main = (post) => {
     return (
         <main>
             <Switch>
-                <Route path={"/post/" + posts.id} component={SinglePost} />
+                <Route path={"/post/:id"} component={SinglePost} />
                 <Route path="/authors" component={AuthorsPage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/" component={HomePage} />
