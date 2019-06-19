@@ -6,7 +6,7 @@ export class SinglePost extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            post: []
+            post: null
         }
     }
 
@@ -19,14 +19,17 @@ export class SinglePost extends React.Component {
             })
     }
     componentDidMount() {
-        // const postId = props.match.params.id;
         this.loadSinglePostData()
     }
 
     render() {
-
         // const post = posts.find(post => `${post.id}` === props.match.params.id);
         const post = this.state.post
+
+        if (!post) {
+            return <h3>Loading post...</h3>
+        }
+
         return (
             <div className="single-post">
                 <span>Back</span>
