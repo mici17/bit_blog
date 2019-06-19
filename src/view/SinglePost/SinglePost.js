@@ -45,11 +45,18 @@ export class SinglePost extends React.Component {
         this.loadSinglePostData()
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.id !== this.props.match.params.id) {
+            const postId = this.props.match.params.id
+            this.loadSinglePostData(postId)
+        }
+    }
+
     render() {
-        console.log(this.state.relatedPosts);
         // const post = posts.find(post => `${post.id}` === props.match.params.id);
         const post = this.state.post;
         const author = this.state.author;
+
         if (!post) {
             return <h3>Loading post...</h3>
         }
@@ -65,7 +72,13 @@ export class SinglePost extends React.Component {
                     {post.body}
                 </article>
                 <div>
-                    {this.state.relatedPosts.map(post => <p className="related-posts">{post.id}. {post.title}</p>)}
+                    <h4 className="related-title">{this.state.relatedPosts.length} more posts from same author:</h4>
+                    {this.state.relatedPosts.map(post =>
+                        <p className="related-posts" key={`${post.id}`}>
+                            <Link to={`/post/${post.id}`} className="related-links">
+                                {`${post.id}. ${post.title}`}
+                            </Link>
+                        </p>)}
                 </div>
             </div>
         )
