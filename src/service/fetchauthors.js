@@ -3,7 +3,7 @@ import { Author } from '../entities/Author'
 
 const fetchAuthors = () => {
     return axios.get('https://jsonplaceholder.typicode.com/users')
-        .then(response => response)
+        .then(response => response.data)
         .then((authors) => {
             return authors.map((authorObj) => {
                 return new Author(authorObj)
