@@ -8,7 +8,7 @@ import { SingleAuthor } from './SingleAuthor/SingleAuthor';
 
 
 
-const Main = (post) => {
+const Main = () => {
     return (
         <main>
             <Switch>

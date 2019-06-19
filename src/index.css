@@ -124,9 +124,34 @@ color: #662e68;
   border-radius: 10px;
   padding: 10px 20px;
   margin-bottom: 25px;
+}
 
+.post-author-name{
+display:block;
+font-size: 25px;
+text-align: center;
+margin-bottom: 25px;
+color: #b0b8db;
 
 }
+.author-link:active,
+.author-link:visited,
+.author-link:hover,
+.author-link:link{
+  text-decoration: none;
+  color: #b0b8db;
+}
+.back-button:active,
+.back-button:visited,
+.back-button:hover,
+.back-button:link{
+  text-decoration: none;
+  color: #b0b8db;
+}
+hr{
+  color: #322b5b
+}
+
 
 .single-post {
   width: 70%;
@@ -137,6 +162,7 @@ color: #662e68;
   font-size: 45px;
   text-align: center;
   color: #322b5b;
+  text-transform: capitalize;
 
 }
 
@@ -145,6 +171,8 @@ color: #662e68;
   text-align: center;
   font-size: 30px;
   color: #662e68;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #b0b8db;
 
 }
 
