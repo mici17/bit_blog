@@ -46,8 +46,6 @@ margin-left:10%;
 
 }
 .authors {
-  border-left: solid 4px #662e68;
-  border-right: solid 4px #662e68;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -103,6 +101,7 @@ color: #662e68;
   border-radius: 10px;
   padding:  10px 20px;
   margin-bottom: 25px;
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.52);
 }
 
 .authors-list {
@@ -124,6 +123,7 @@ color: #662e68;
   border-radius: 10px;
   padding: 10px 20px;
   margin-bottom: 25px;
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.52);
 }
 
 .post-author-name{
