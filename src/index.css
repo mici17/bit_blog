@@ -263,8 +263,19 @@ hr{
 }
 
 .related-posts {
+  font-size: 20px;
   padding-top: 15px;
-  color: #b0b8db;
+}
+
+.related-links:link,
+.related-links:active,
+.related-links:hover,
+.related-links:visited{
+text-decoration: none;
+color: #662e68;
+}
+.related-title{
+  color: #4e5572;
 }
 
 
