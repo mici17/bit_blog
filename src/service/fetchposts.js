@@ -19,7 +19,17 @@ const fetchSinglePost = (postId) => {
         })
 }
 
+const fetchRelatedPosts = (userId) => {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+        .then(response => response.data)
+        .then((posts) => {
+            return posts.map((postObj) => {
+                return new Post(postObj)
+            })
+        })
+}
 export {
     fetchPosts,
-    fetchSinglePost
+    fetchSinglePost,
+    fetchRelatedPosts
 }

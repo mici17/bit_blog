@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { fetchSinglePost } from '../../service/fetchposts'
+import { fetchSinglePost, fetchRelatedPosts } from '../../service/fetchposts'
 import { fetchSingleAuthor } from '../../service/fetchauthors'
 
 export class SinglePost extends React.Component {
@@ -8,7 +8,8 @@ export class SinglePost extends React.Component {
         super(props);
         this.state = {
             post: null,
-            author: null
+            author: null,
+            relatedPosts: []
         }
     }
 
@@ -18,8 +19,8 @@ export class SinglePost extends React.Component {
         fetchSinglePost(postId)
             .then(post => {
                 this.setState({ post: post })
-                this.loadSingleAuthorData(post.userId)
-
+                this.loadSingleAuthorData(post.userId);
+                this.loadRelatedPosts(post.userId);
             })
     }
 
@@ -30,11 +31,22 @@ export class SinglePost extends React.Component {
             })
     }
 
+    loadRelatedPosts(userId) {
+        fetchRelatedPosts(userId)
+            .then(userPosts => {
+                const currentPostId = Number.parseInt(this.props.match.params.id)
+                const relatedPosts = userPosts.filter(post => post.id !== currentPostId)
+
+                this.setState({ relatedPosts })
+            })
+    }
+
     componentDidMount() {
         this.loadSinglePostData()
     }
 
     render() {
+        console.log(this.state.relatedPosts);
         // const post = posts.find(post => `${post.id}` === props.match.params.id);
         const post = this.state.post;
         const author = this.state.author;
@@ -52,6 +64,9 @@ export class SinglePost extends React.Component {
                 <article className="single-post-body">
                     {post.body}
                 </article>
+                <div>
+                    {this.state.relatedPosts.map(post => <p className="related-posts">{post.id}. {post.title}</p>)}
+                </div>
             </div>
         )
     }
