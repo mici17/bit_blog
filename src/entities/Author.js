@@ -1,5 +1,5 @@
 class Author {
-    constructor (authorObject) {
+    constructor(authorObject) {
         this.name = authorObject.name;
         this.id = authorObject.id;
         this.username = authorObject.username;
@@ -11,8 +11,10 @@ class Author {
         this.website = authorObject.website;
         this.companyName = authorObject.company.name;
         this.slogan = authorObject.company.catchPhrase;
+        this.latitude = authorObject.address.geo.lat;
+        this.longitude = authorObject.address.geo.lng;
 
     }
 }
 
-export { Author}
+export { Author }
