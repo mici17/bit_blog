@@ -1,6 +1,7 @@
 import React from 'react';
-import { PostItem } from './PostItem'
-import { fetchPosts } from '../../service/fetchposts'
+import { PostItem } from './PostItem';
+import { fetchPosts } from '../../service/fetchposts';
+
 
 export class HomePage extends React.Component {
     constructor(props) {
@@ -8,6 +9,8 @@ export class HomePage extends React.Component {
 
         this.state = {
             posts: [],
+            comments: null,
+            author: []
         }
     }
 
@@ -18,16 +21,19 @@ export class HomePage extends React.Component {
             })
     }
 
+
     componentDidMount() {
         this.loadData()
     }
+
     render() {
+
         return (
             <div className="posts-list" >
                 <h1 className="posts-title">POSTS</h1>
                 <div className="whole-list">
                     {this.state.posts.map((post) => {
-                        return <PostItem post={post} />
+                        return <PostItem post={post} key={`${post.id}`} />
                     })}
                 </div>
 

@@ -28,6 +28,9 @@ const fetchRelatedPosts = (userId) => {
             })
         })
 }
+
+
+
 export {
     fetchPosts,
     fetchSinglePost,
