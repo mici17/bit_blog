@@ -46,8 +46,6 @@ margin-left:10%;
 
 }
 .authors {
-  border-left: solid 4px #662e68;
-  border-right: solid 4px #662e68;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -103,6 +101,7 @@ color: #662e68;
   border-radius: 10px;
   padding:  10px 20px;
   margin-bottom: 25px;
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.52);
 }
 
 .authors-list {
@@ -124,9 +123,35 @@ color: #662e68;
   border-radius: 10px;
   padding: 10px 20px;
   margin-bottom: 25px;
+  box-shadow: 10px 13px 24px -6px rgba(0,0,0,0.52);
+}
 
+.post-author-name{
+display:block;
+font-size: 25px;
+text-align: center;
+margin-bottom: 25px;
+color: #b0b8db;
 
 }
+.author-link:active,
+.author-link:visited,
+.author-link:hover,
+.author-link:link{
+  text-decoration: none;
+  color: #b0b8db;
+}
+.back-button:active,
+.back-button:visited,
+.back-button:hover,
+.back-button:link{
+  text-decoration: none;
+  color: #b0b8db;
+}
+hr{
+  color: #322b5b
+}
+
 
 .single-post {
   width: 70%;
@@ -137,6 +162,7 @@ color: #662e68;
   font-size: 45px;
   text-align: center;
   color: #322b5b;
+  text-transform: capitalize;
 
 }
 
@@ -145,6 +171,8 @@ color: #662e68;
   text-align: center;
   font-size: 30px;
   color: #662e68;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #b0b8db;
 
 }
 
@@ -232,6 +260,22 @@ color: #662e68;
   font-size: 24px;
   padding-bottom: 24px;
   color: #662e68;
+}
+
+.related-posts {
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.related-links:link,
+.related-links:active,
+.related-links:hover,
+.related-links:visited{
+text-decoration: none;
+color: #662e68;
+}
+.related-title{
+  color: #4e5572;
 }
 
 

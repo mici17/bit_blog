@@ -1,22 +1,46 @@
 import React from 'react';
-import { posts } from '../../shared/posts';
-import { PostItem } from './PostItem'
+import { PostItem } from './PostItem';
+import { fetchPosts } from '../../service/fetchposts';
 
-export const HomePage = () => {
 
-    return (
-        <div className="posts-list">
-            <h1 className="posts-title">POSTS</h1>
-            <div className="whole-list">
-                {posts.map((post) => {
-                    return <PostItem post={post} />
-                })}
+export class HomePage extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            posts: [],
+            comments: null,
+            author: []
+        }
+    }
+
+    loadData() {
+        fetchPosts()
+            .then(posts => {
+                this.setState({ posts: posts })
+            })
+    }
+
+
+    componentDidMount() {
+        this.loadData()
+    }
+
+    render() {
+
+        return (
+            <div className="posts-list" >
+                <h1 className="posts-title">POSTS</h1>
+                <div className="whole-list">
+                    {this.state.posts.map((post) => {
+                        return <PostItem post={post} key={`${post.id}`} />
+                    })}
+                </div>
+
+
             </div>
-
-
-        </div>
-    )
-
+        )
+    }
 }
 
 

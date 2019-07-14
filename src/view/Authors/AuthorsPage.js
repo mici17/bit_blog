@@ -1,12 +1,37 @@
 import React from 'react';
 import { AuthorItem } from './AuthorItem';
-import { authors } from '../../shared/authors'
+import { fetchAuthors } from '../../service/fetchauthors'
 
-export const AuthorsPage = () => (
-    <div className="authors-list">
-        <h1 className="authors-title">AUTHORS ({authors.length})</h1>
-        <div className="authors-whole-list">
-            {authors.map(author => <AuthorItem author={author} />)}
-        </div>
-    </div>
-);
+export class AuthorsPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            authors: []
+        }
+    }
+    loadData() {
+        fetchAuthors()
+            .then(authors => {
+                this.setState({ authors: authors })
+            })
+    }
+
+    componentDidMount() {
+        this.loadData()
+    }
+
+
+
+
+    render() {
+        return (
+            <div className="authors-list">
+                <h1 className="authors-title">AUTHORS ({this.state.authors.length})</h1>
+                <div className="authors-whole-list">
+                    {this.state.authors.map(author => <AuthorItem author={author} />)}
+                </div>
+            </div>
+        );
+
+    }
+}
